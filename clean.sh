@@ -1,12 +1,10 @@
 #!/bin/ash
 
-chown $(whoami) /var/run/docker.sock
-
 interval_s="${INTERVAL_S:-86400}"
 
 if [ ! -f /var/run/docker.sock ]; then
     echo "Please mount the docker socket (e.g., '-v /var/run/docker.sock:/var/run/docker.sock')"
-	exit
+	#exit
 fi
 
 while true
