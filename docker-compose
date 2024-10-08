@@ -4,7 +4,7 @@ services:
     dockerAutoPrune:
         image: ghcr.io/philippmundhenk/dockerautoprune
         volumes:
-            - /var/run.docker.sock:/var/run/docker.sock
+            - /var/run/docker.sock:/var/run/docker.sock
         environment:
             - INTERVAL_S=86400
             - REMOVE_ALL=true
