@@ -1,7 +1,7 @@
 FROM alpine:3.6
 
 RUN apk add --update --no-cache docker
-RUN usermod -aG docker $USER
+RUN addgroup ${USER} docker
 
 COPY clean.sh /
 
