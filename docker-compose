@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+    dockerAutoPrune:
+        image: ghcr.io/philippmundhenk/dockerautoprune
+        volumes:
+            - /var/run.docker.sock:/var/run/docker.soc
+        environment:
+            - INTERVAL_S=86400
+            - REMOVE_ALL=true
+            - REMOVE_VOLUMES=true
+        restart: unless-stopped
