@@ -4,8 +4,7 @@ interval_s="${INTERVAL_S:-86400}"
 
 while true
 do
-	echo "sleeping for $interval_s seconds"
-	sleep $interval_s
+	echo "starting cleanup..."
 	OPTIONS=""
 	if [[ $REMOVE_ALL == "true" ]]; then
 		OPTIONS="$OPTIONS --all"
@@ -14,5 +13,7 @@ do
 		OPTIONS="$OPTIONS --volumes"
 	fi
 	docker system prune --force $OPTIONS
+	echo "sleeping for $interval_s seconds..."
+	sleep $interval_s
 done
 
