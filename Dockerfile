@@ -4,4 +4,4 @@ RUN apk add --update --no-cache docker
 
 COPY clean.sh /
 
-CMD ["/bin/bash", "/clean.sh"]
+CMD ["/bin/ash", "/clean.sh"]

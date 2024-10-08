@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 
 interval_s="${INTERVAL_S:-86400}"
 
